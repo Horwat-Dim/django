@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+ <meta charset="UTF-8"/>
+ <title>Сервіс Обліку Студентів</title>
+ <meta name="description"
+       value="Система Обліку Студентів Навчального Закладу"
+       name="viewport"
+       content="width=device-width, initial-scale=1"
+       />
+
+       <!-- Include Styles -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+       rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+       <!-- Include our styles   -->
+ <link href="css/main.css" rel="stylesheet">
+ <!--   Make red border near elements tables
+ <style type="text/css">.col-xs-12, .col-xs-6, .col-xs-4,
+  .col-xs-8, col-md-8, col-md-4,  li, tr, th{border: 1px solid red;}</style>
+   -->
+</head>
+
+<body>
+  <!-- Start Container -->
+<div class="container">
+     <!-- Start Header -->
+  <div class="row">
+    <div class="col-xs-12 col-md-8">
+      <h1>Сервіс Обліку Студентів</h1>
+    </div>
+          <!-- Groups Selector -->
+    <div class="col-xs-6 col-md-4" id="group-selector">
+      <strong>Група:</strong>
+      <select>
+        <option value="">Усі Студенти</option>
+        <option value="">МтМ - 21, Подоба Віталій (№ 254)</option>
+        <option value="">МтМ - 22, Корост Андрій (№ 2123)</option>
+      </select>
+    </div>
+  </div>
+       <!-- Start SubHeader -->
+    <div class="row" id="sub-header">
+      <div class="col-xs-12">
+           <ul class="nav nav-tabs">
+             <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="#">Студенти</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#">Відвідування</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#">Групи</a>
+             </li>
+           </ul>
+      </div>
+    </div>
+    <!-- End SubHeader -->
+
+    <!-- Start Main Page Content -->
+   <div class="row" id="content-columns">
+	<div class="col-xs-12" id="content-column">
+
+             <!-- Status Message -->
+             <div class="alert alert-warning" role="alert">
+                  Зміни скасовано.
+             </div>
+             <h2>База Студентів</h2>
+
+             <!-- Add Students Button
+             <button type="button" class="btn btn-primary" href="#">Додати Студента</button>
+              -->
+             <a class="btn btn-primary" href="#">Додати Студента</a>
+
+             <!-- Start Students Listing -->
+             <table class="table table-hover table-striped">
+
+               <thead>
+                <tr>
+                   <th>№</th>
+                   <th>Фото</th>
+                   <th>Прізвище</th>
+                   <th>Ім’я</th>
+                   <th>№ Білету</th>
+                   <th>Дії</th>
+                </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                    <!--
+                    <img src="./img/User 01.jpg" height="30" witdth="30" class="img-circle"> -->
+                    <img src="./img/User 01.jpg" class="rounded-circle" height="30" witdth="30">
+                    </td>
+                    <td><a title="Редагувати" href="#">Корост</a></td>
+                    <td><a title="Редагувати" href="#">Андрій</a></td>
+                    <td>2123</td>
+                    <td>
+                       <!--   From Book
+                       <div class="nav-item dropdown">
+                         <button class="btn btn-default dropdown-toggle"
+                                 type="button" data-toggle="dropdown">Дія
+                           <span class="caret"></span>
+                         </button>
+                         <ul class="dropdown-menu" role="menu"
+                             aria-labelledby="dropdownMenuButton1">
+                           <li role="presentation">
+                             <a role="menuitem" tabindex="-1"
+                                href="#">Відвідування</a>
+                           </li>
+                           <li role="presentation">
+                             <a role="menuitem" tabindex="-1" href="#">Редагувати</a>
+                           </li>
+                           <li role="presentation">
+                             <a role="menuitem" tabindex="-1" href="#">Видалити</a>
+                           </li>
+                         </ul>
+                       </div>
+                       -->
+                       <!--    From bootstrap.com     -->
+
+                       <div class="dropdown">
+                         <button class="btn btn-secondary dropdown-toggle"
+                                 type="button"
+                                 id="dropdownMenuButton1"
+                                 data-bs-toggle="dropdown"
+                                 aria-expanded="false">
+                            Дія
+                         </button>
+                           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                               <li><a class="dropdown-item" href="#">Відвідування</a></li>
+                               <li><a class="dropdown-item" href="#">Редагувати</a></li>
+                               <li><a class="dropdown-item" href="#">Видалити</a></li>
+                           </ul>
+                       </div>
+
+                    </td>
+                  </tr>
+                  <tr>
+                  <td>2</td>
+                    <td><img class="rounded-circle" height="30" width="30" src="./img/User 02.jpg"></td>
+                    <td><a title="Редагувати" href="#">Подоба</a></td>
+                    <td><a title="Редагувати" href="#">Віталій</a></td>
+                    <td>2124</td>
+                    <td>
+                       <!--   From Book        -->
+                       <div class="nav-item dropdown">
+                         <button class="btn btn-secondary dropdown-toggle"
+                                 type="button" data-bs-toggle="dropdown"
+                                 aria-expanded="false">Дія
+                           <span class="caret"></span>
+                         </button>
+                         <ul class="dropdown-menu" role="menu"
+                             aria-labelledby="dropdownMenuButton1">
+                           <li role="presentation">
+                             <a role="menuitem" tabindex="-1"
+                                href="#">Відвідування</a>
+                           </li>
+                           <li role="presentation">
+                             <a role="menuitem" tabindex="-1" href="#">Редагувати</a>
+                           </li>
+                           <li role="presentation">
+                             <a role="menuitem" tabindex="-1" href="#">Видалити</a>
+                           </li>
+                         </ul>
+                       </div>
+                       <!--    From bootstrap.com
+                       <div class="dropdown">
+                         <button class="btn btn-secondary dropdown-toggle"
+                                 type="button"
+                                 id="dropdownMenuButton1"
+                                 data-bs-toggle="dropdown"
+                                 aria-expanded="false">
+                            Дія
+                         </button>
+                           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                               <li><a class="dropdown-item" href="#">Відвідування</a></li>
+                               <li><a class="dropdown-item" href="#">Редагувати</a></li>
+                               <li><a class="dropdown-item" href="#">Видалити</a></li>
+                           </ul>
+                         </div>                     -->
+                    </td>
+                  <tr>
+                    <td>3</td>
+                    <td><img class="rounded-circle" height="30" width="30" src="./img/User 03.jpg"></td>
+                    <td><a title="Редагувати" href="#">Чупик</a></td>
+                    <td><a title="Редагувати" href="#">Микола</a></td>
+                    <td>2125</td>
+                    <td>
+                       <!--   From Book
+                       <div class="nav-item dropdown">
+                         <button class="btn btn-default dropdown-toggle"
+                                 type="button" data-toggle="dropdown">Дія
+                           <span class="caret"></span>
+                         </button>
+                         <ul class="dropdown-menu" role="menu"
+                             aria-labelledby="dropdownMenuButton1">
+                           <li role="presentation">
+                             <a role="menuitem" tabindex="-1"
+                                href="#">Відвідування</a>
+                           </li>
+                           <li role="presentation">
+                             <a role="menuitem" tabindex="-1" href="#">Редагувати</a>
+                           </li>
+                           <li role="presentation">
+                             <a role="menuitem" tabindex="-1" href="#">Видалити</a>
+                           </li>
+                         </ul>
+                       </div>
+                       -->
+                       <!--    From bootstrap.com     -->
+
+                       <div class="dropdown">
+                         <button class="btn btn-secondary dropdown-toggle"
+                                 type="button"
+                                 id="dropdownMenuButton1"
+                                 data-bs-toggle="dropdown"
+                                 aria-expanded="false">
+                            Дія
+                         </button>
+                           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                               <li><a class="dropdown-item" href="#">Відвідування</a></li>
+                               <li><a class="dropdown-item" href="#">Редагувати</a></li>
+                               <li><a class="dropdown-item" href="#">Видалити</a></li>
+                           </ul>
+                         </div>
+                       </td
+                  </tr>
+                </tbody>
+               </table>
+
+               <!--    Page list navigation    -->
+               <nav aria-label="Page navigation example">
+                    <ul class="pagination"">
+                      <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item active" aria-current="page">
+                      <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                    </ul>
+               </nav>
+<!-- End Students Listing -->
+        </div>
+   </div>
+   <!-- End Main Page Content -->
+
+    <!-- Start Footer -->
+    <div class="row" id="footer">
+        <div class="col-xs-12">
+	 &copy; 2014 Сервіс Обліку Студентів
+	</div>
+    </div>
+    <!-- End Footer -->
+
+  </div>
+ <!-- End Container -->
+
+</div>
+
+<!-- Javascripts Section -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>
